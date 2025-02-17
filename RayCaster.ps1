@@ -31,16 +31,16 @@ Github: https://www.example.comMyRepository ; Other Games: https://github.com/Ou
 
 
 pause
-$hwnd = (Get-Process -Id $PID).MainWindowHandle
-Add-Type -TypeDefinition @"
-using System;
-using System.Runtime.InteropServices;
-public class WinAPI {
-    [DllImport("user32.dll")]
-    public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-}
-"@
-[WinAPI]::ShowWindow($hwnd, 6)
+#$hwnd = (Get-Process -Id $PID).MainWindowHandle
+#Add-Type -TypeDefinition @"
+#using System;
+#using System.Runtime.InteropServices;
+#public class WinAPI {
+#    [DllImport("user32.dll")]
+#    public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+#}
+#"@
+#[WinAPI]::ShowWindow($hwnd, 6)
 Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms
 
