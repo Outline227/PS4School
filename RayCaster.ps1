@@ -3,7 +3,7 @@ cls #Don't Delete
 Write-Host @"
 Thanks for using Quent's Script, Youre probably at school
 To close the script (Game), press 'Q' or the exit button.
-After you run this script, make sure to find the new window on your taskbar because it will appear closed
+
 
 Check Frequently My repository for any new games / updates
 Github: https://www.example.comMyRepository ; Other Games: https://github.com/Outline227/PS4School/blob/main/Games.CONTENT
