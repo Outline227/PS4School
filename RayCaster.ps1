@@ -1,33 +1,102 @@
+# If you realy want to use my script. Please dont be Greedy and credit me.
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
 cls #Don't Delete
 
-Write-Host @"
-Thanks for using Quent's Script, Youre probably at school
-To close the script (Game), press 'Q' or the exit button.
+$prompt = [char]27 + "[38;2;0;255;255m" + "Thanks for using Quent's Script, Youre probably at school"
+Write-Host $prompt
+
+$prompt = [char]27 + "[38;2;0;255;255m" + "To close the script (Game), press"
+Write-Host $prompt -nonewline
+
+$prompt = [char]27 + "[38;2;255;255;0m" + " 'Q' "
+Write-Host $prompt -nonewline
+
+$prompt = [char]27 + "[38;2;0;255;255m" + "or the exit button."
+Write-Host $prompt 
+Write-Host
+
+$prompt = [char]27 + "[38;2;255;0;0m" + "Check Frequently My repository for any new games / updates"
+Write-Host $prompt
+
+Write-Host "Github: " -nonewline
 
 
-Check Frequently My repository for any new games / updates
-Github: https://www.example.comMyRepository ; Other Games: https://github.com/Outline227/PS4School/blob/main/Games.CONTENT
+$prompt = [char]27 + "[38;2;87;151;255m" + "https://github.com/Outline227/PS4School"
+Write-Host $prompt -nonewline
+Write-Host " Games: " -nonewline
 
-                                                          @                                    
-                                                          @@                                   
-          @@@@                                            @@      @@@                          
-         @@@@@@@@                           @@@@@@@@      @@@     @@@  @@@@@@@@@@@@@@@@@       
-       @@@@   @@@@@@       @@@         @@  @@@@@@@@@@@@   @@@    @@@@         @@@              
-      @@@@       @@@@@@   @@@@        @@@  @@@@           @@@@   @@@         @@@               
-     @@@@           @@@@@ @@@         @@@  @@@@           @@@@   @@@         @@@               
-   @@@@            @@@@@  @@@         @@@  @@@            @@@@@  @@@         @@@              
-  @@@@       @@   @@@@    @@@         @@@  @@@@@@@@       @@@@@ @@@          @@@              
-   @@@@@     @@@@@@@      @@@        @@@@  @@@@@@@@@     @@@@@@@@@@         @@@               
-     @@@@@    @@@@@       @@@        @@@   @@@           @@@@@@@@@@         @@@                 
-       @@@@@ @@@@@@       @@@@      @@@    @@@           @@@ @@@@@@         @@@                 
-         @@@@@@  @@@       @@@     @@@@    @@@           @@   @@@@         @@@@                 
-           @@@    @@@       @@@@@@@@@@     @@@@@@@@@     @     @@@         @@@                  
-                             @@@@@@@       @@@@@@@@@@@   @     @@@         @@@                  
-                                                                @@                              
-                                                                @                               
-"@
+$prompt = [char]27 + "[38;2;87;151;255m" +"https://github.com/Outline227/PS4School/blob/main/Games.CONTENT"
+Write-Host $prompt
+Write-Host
+
+$dw1 = [char]27+"[38;2;255;0;0m"+"                                                          @                                    "
+$dw2 = [char]27+"[38;2;255;10;0m"+"                                                          @@                                   "
+$dw3 = [char]27+"[38;2;255;20;0m"+"          @@@@                                            @@      @@@                          "
+$dw4 = [char]27+"[38;2;255;30;0m"+"         @@@@@@@@                           @@@@@@@@      @@@     @@@  @@@@@@@@@@@@@@@@@       "
+$dw5 = [char]27+"[38;2;255;40;0m"+"       @@@@   @@@@@@       @@@         @@  @@@@@@@@@@@@   @@@    @@@@         @@@              "
+$dw6 = [char]27+"[38;2;255;50;0m"+"      @@@@       @@@@@@   @@@@        @@@  @@@@           @@@@   @@@         @@@               "
+$dw7 = [char]27+"[38;2;255;60;0m"+"     @@@@           @@@@@ @@@         @@@  @@@@           @@@@   @@@         @@@               "
+$dw8 = [char]27+"[38;2;255;70;0m"+"   @@@@            @@@@@  @@@         @@@  @@@            @@@@@  @@@         @@@               "
+$dw9 = [char]27+"[38;2;255;80;0m"+"  @@@@       @@   @@@@    @@@         @@@  @@@@@@@@       @@@@@ @@@          @@@               "
+$dwa = [char]27+"[38;2;255;90;0m"+"   @@@@@     @@@@@@@      @@@        @@@@  @@@@@@@@@     @@@@@@@@@@         @@@                "
+$dwb = [char]27+"[38;2;255;100;0m"+"     @@@@@    @@@@@       @@@        @@@   @@@           @@@@@@@@@@         @@@                "
+$dwc = [char]27+"[38;2;255;110;0m"+"       @@@@@ @@@@@@       @@@@      @@@    @@@           @@@ @@@@@@         @@@                "
+$dwd = [char]27+"[38;2;255;120;0m"+"         @@@@@@  @@@       @@@     @@@@    @@@           @@   @@@@         @@@@                "
+$dwe = [char]27+"[38;2;255;130;0m"+"           @@@    @@@       @@@@@@@@@@     @@@@@@@@@     @     @@@         @@@                 "
+$dwf = [char]27+"[38;2;255;140;0m"+"                             @@@@@@@       @@@@@@@@@@@   @      @@         @@@                 "
+$dw0 = [char]27+"[38;2;255;150;0m"+"                                                                 @                             " 
+
+Write-Host $dw1
+Write-Host $dw2
+Write-Host $dw3
+Write-Host $dw4
+Write-Host $dw5
+Write-Host $dw6
+Write-Host $dw7
+Write-Host $dw8
+Write-Host $dw9
+Write-Host $dwa
+Write-Host $dwb
+Write-Host $dwc
+Write-Host $dwd
+Write-Host $dwe
+Write-Host $dwf
+Write-Host $dw0
 
 pause
+cls
+#End of DOC
+Write-Host "This Game may be laggy for some pcs so choose your Resolution"
+Write-Host
+
+$dw0 = [char]27+"[38;2;0;255;0m"+ "VHIGH: You must have the best Pc To run on this mode"
+$dw1 = [char]27+"[38;2;100;255;0m"+ "HIGH: Higher Quality, (may Decrease Performance)"
+$dw2 = [char]27+"[38;2;255;255;0m"+ "MED: Balanced version between Quality and Performance"
+$dw3 = [char]27+"[38;2;255;100;0m"+ "LOW / Else: Low Quality, made for slower old pcs / laptops"
+$dw4 = [char]27+"[38;2;255;0;0m"+ "VLOW: 101% No Lag"
+
+Write-Host $dw0
+Write-Host $dw1
+Write-Host $dw2
+Write-Host $dw3
+Write-Host $dw4
+
+Write-Host
+$global:quality = 2
+$dec = Read-Host "Res"
+
+switch ($dec) {
+	"VHIGH" { $quality = 2 }
+    "HIGH" { $quality = 2 }
+    "MED" { $quality = 4 }
+    "LOW" { $quality = 6 }
+	"VLOW" { $quality = 10 }
+    default { $quality = 6 }
+}
+cls
 
 Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms
@@ -150,7 +219,6 @@ $debug = @{
 	px=0
 	py=0
 }
-$quality = 4
 $keys = @{
     W = $false
     S = $false
@@ -284,5 +352,15 @@ $form.add_KeyUp({
     if ($e.KeyCode -eq "A") { $keys.A = $false }
     if ($e.KeyCode -eq "D") { $keys.D = $false }
 })
+$hwnd = (Get-Process -Id $PID).MainWindowHandle
+Add-Type -TypeDefinition @"
+using System;
+using System.Runtime.InteropServices;
+public class WinAPI {
+    [DllImport("user32.dll")]
+    public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+}
+"@
+[WinAPI]::ShowWindow($hwnd, 6)
 
 $form.ShowDialog()
