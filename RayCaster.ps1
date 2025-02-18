@@ -368,6 +368,4 @@ public class WinAPI {
 }
 "@
 [WinAPI]::ShowWindow($hwnd, 6)
-Start-Sleep -Milliseconds 2000
-
 $form.ShowDialog()
