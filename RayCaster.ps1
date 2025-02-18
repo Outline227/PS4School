@@ -116,71 +116,6 @@ $map = @(
 )
 
 
-$DebugLo1 = New-Object System.Windows.Forms.Label; $DebugLo1.Text = "    "; $DebugLo1.AutoSize = $true; $DebugLo1.Font = New-Object System.Drawing.Font("Lucida Console", 150); $DebugLo1.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255); $DebugLo1.Location = New-Object System.Drawing.Point(0, 0); $form.Controls.Add($DebugLo1); $DebugLo1.BringToFront(); $DebugLo1.BackColor = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
-
-#Debugs
-$Debug1 = New-Object System.Windows.Forms.Label
-$Debug1.Text = "HeartBeat: "
-$Debug1.AutoSize = $true
-$Debug1.Font = New-Object System.Drawing.Font("Lucida Console", 12)
-$Debug1.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
-$Debug1.Location = New-Object System.Drawing.Point(0, 0)
-$form.Controls.Add($Debug1)
-$Debug1.BringToFront()
-$Debug1.BackColor = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
-#
-$Debug2 = New-Object System.Windows.Forms.Label
-$Debug2.Text = "HeartBeat: "
-$Debug2.AutoSize = $true
-$Debug2.Font = New-Object System.Drawing.Font("Lucida Console", 12)
-$Debug2.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
-$Debug2.Location = New-Object System.Drawing.Point(0, 20)
-$form.Controls.Add($Debug2)
-$Debug2.BringToFront()
-$Debug2.BackColor = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
-#
-$Debug3 = New-Object System.Windows.Forms.Label
-$Debug3.Text = "PlayerPos: "
-$Debug3.AutoSize = $true
-$Debug3.Font = New-Object System.Drawing.Font("Lucida Console", 12)
-$Debug3.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
-$Debug3.Location = New-Object System.Drawing.Point(0, 40)
-$form.Controls.Add($Debug3)
-$Debug3.BringToFront()
-$Debug3.BackColor = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
-#
-$Debug4 = New-Object System.Windows.Forms.Label
-$Debug4.Text = "Speed: "
-$Debug4.AutoSize = $true
-$Debug4.Font = New-Object System.Drawing.Font("Lucida Console", 12)
-$Debug4.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
-$Debug4.Location = New-Object System.Drawing.Point(0, 60)
-$form.Controls.Add($Debug4)
-$Debug4.BringToFront()
-$Debug4.BackColor = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
-#
-$Debug5 = New-Object System.Windows.Forms.Label
-$Debug5.Text = "PlayerPos: "
-$Debug5.AutoSize = $true
-$Debug5.Font = New-Object System.Drawing.Font("Lucida Console", 12)
-$Debug5.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
-$Debug5.Location = New-Object System.Drawing.Point(0, 80)
-$form.Controls.Add($Debug5)
-$Debug5.BringToFront()
-$Debug5.BackColor = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
-##################################################################
-
-#ManagementUI
-$Debug1.Visible = $false
-$Debug2.Visible = $false
-$Debug3.Visible = $false
-$Debug4.Visible = $false
-$Debug5.Visible = $false
-
-$DebugLo1.Visible = $false
-#############
-
-
 $colors = @{
     1 = [Drawing.Color]::FromArgb(255, 255, 0, 0)
     2 = [Drawing.Color]::FromArgb(255, 0, 255, 0)
@@ -215,7 +150,7 @@ $debug = @{
 	px=0
 	py=0
 }
-$quality = 3
+$quality = 4
 $keys = @{
     W = $false
     S = $false
@@ -248,25 +183,7 @@ $movePlayer = {
 }
 
 
-$frameCount = 0
-$stopwatch = [Diagnostics.Stopwatch]::StartNew()
-
 $renderFrame = {
-	$debug.frm += 1
-	$Debug3.Text = "Position: X" + $player.x + " Z" + $player.y
-	$Debug4.Text = "Speed: " + $player.speed
-	$Debug5.Text = "ComonRenderTrace: " + $form.Width / $quality
-    $elapsedSeconds = $stopwatch.Elapsed.TotalSeconds
-    if ($elapsedSeconds -ge 1) {
-		$Debug1.Text = "Fps: " + $debug.frm
-		$player.fps = $debug.frm
-        $debug.frm = 0
-		
-		$Debug2.Text = "HeartBeats: " + $debug.htb
-        $debug.htb = 0
-        $stopwatch.Restart()
-    }
-	
     $movePlayer.Invoke()
     $g.Clear([Drawing.Color]::Black)
     for ($x = 0; $x -lt $form.Width; $x += $quality) {
@@ -353,35 +270,6 @@ $form.add_KeyDown({
     if ($e.KeyCode -eq "A") { $keys.A = $true }
     if ($e.KeyCode -eq "D") { $keys.D = $true }
     if ($e.Shift) { $keys.Shift = -not $keys.Shift }
-	if ($e.KeyCode -eq [System.Windows.Forms.Keys]::F1) {
-		Write-Host gjjj
-		if ($keys.F1) {
-			$keys.F1 = $false
-			
-			$DebugLo1.Visible = $false
-			$Debug1.Visible = $false
-			$Debug2.Visible = $false
-			$Debug3.Visible = $false
-			$Debug4.Visible = $false
-			$Debug5.Visible = $false
-		}
-		else {
-			$keys.F1 = $true
-			
-			$DebugLo1.Visible = $true
-			$Debug1.Visible = $true
-			$Debug2.Visible = $true
-			$Debug3.Visible = $true
-			$Debug4.Visible = $true
-			$Debug5.Visible = $true
-			
-			$Debug1.BringToFront()
-			$Debug2.BringToFront()
-			$Debug3.BringToFront()
-			$Debug4.BringToFront()
-			$Debug5.BringToFront()
-		}
-	}
 	if ($e.KeyCode -eq "Q") {
        $pid = $PID
 	   Start-Process powershell -ArgumentList "-Command Stop-Process -Id $pid"
