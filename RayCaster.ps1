@@ -97,6 +97,12 @@ switch ($dec) {
     default { $quality = 6 }
 }
 cls
+Write-Host "Controlls:"
+Write-Host "W/S: Moves Forward/Backward"
+Write-Host "A/D: Moves Rotate Left/Right"
+Write-Host "Shift: Moves 2 Times faster"
+pause
+cls
 
 Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms
