@@ -1,1 +1,10 @@
+If you ask why the links arent from github Repository, its becasue its shorter and more easier to type.
 
+Step 1. Open Runbox (Win + R).
+Step 2. write powershell <game command> (You can just open powershell and write the command there, that works too)
+Step 3. Press enter to run it.
+
+
+Here are the Games Command: (1 Game for now)
+
+Raycaster: irm bit.ly/PS4School_RayCaster | iex
