@@ -4,6 +4,10 @@ Step 1. Open Runbox (Win + R).
 Step 2. write powershell <game command> (You can just open powershell and write the command there, that works too)
 Step 3. Press enter to run it.
 
+If you cant run the games on the pc try to add "-ExecutionPolicy Bypass" in the box, for example: "powershell -ExecutionPolicy Bypass irm bit.ly/PS4School_RayCaster | iex",
+tho it might be too long so write it on paper or something.
+
+
 
 Here are the Games Command: (1 Game for now)
 
